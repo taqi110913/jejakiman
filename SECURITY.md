@@ -7,7 +7,7 @@ currently being supported with security updates.]: #
 
 | Version | Supported          |
 | ------- | ------------------ |
-|developmental | ✅ |
+|Pre-development | ✅ |
 
 ## Reporting a Vulnerability
 
@@ -17,4 +17,4 @@ reported vulnerability, what to expect if the vulnerability is accepted or
 declined, etc.]: #
 
 If you suspect a vulnerability in this repository, **please do not report it publicly.**
-Instead, kindly report in our [security advisory](https://github.com/taqi110913/taqiy/security/advisories).
+Instead, kindly report in our [security advisory](https://github.com/taqi110913/jejakiman/security/advisories).
