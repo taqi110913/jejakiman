@@ -18,11 +18,10 @@
   </p>
 </p>
 
-![Static Badge](https://img.shields.io/badge/👥Contributors👥-1-green.svg?style=flat-square)
-![Static Badge](https://img.shields.io/badge/🍴Forks🍴-0-blue.svg?style=flat-square)
-![Static Badge](https://img.shields.io/badge/🩹Open_Issues🩹-2-yellow.svg?style=flat-square)
-![Static Badge](https://img.shields.io/badge/⭐Stars⭐-1-blue.svg?style=flat-square)
-![Static Badge](https://img.shields.io/badge/🪪License🪪-GPL--3.0-red.svg?style=flat-square)
-(Updated weekly)
+[![Jejak Iman contributors](https://img.shields.io/github/contributors/taqi110913/jejakiman?style=for-the-badge&label=%F0%9F%91%A5Contributors%F0%9F%91%A5&labelColor=%23cbcbcb&color=green)]()
+![Jejak Iman forks](https://img.shields.io/github/forks/taqi110913/jejakiman?style=for-the-badge&label=%F0%9F%8D%B4Forks%F0%9F%8D%B4&labelColor=%23cbcbcb&color=blue)
+![Jejak Iman Issues](https://img.shields.io/github/issues/taqi110913/jejakiman?style=for-the-badge&label=%F0%9F%A9%B9Issues%F0%9F%A9%B9&labelColor=%23dbdbdb&color=yellow)
+![Jejak Iman stars](https://img.shields.io/github/stars/taqi110913/jejakiman?style=for-the-badge&label=%E2%AD%90Stars%E2%AD%90&labelColor=%23dbdbdb&color=blue)
+[![Static Badge](https://img.shields.io/badge/🪪License🪪-GPL--3.0-red.svg?style=flat-square)](https://img.shields.io/github/license/taqi110913/jejakiman?style=for-the-badge&label=%F0%9F%AA%AALicense%F0%9F%AA%AA&labelColor=%23dbdbdb&color=red)
 
 <h1 align="center">About Jejak Iman</h1>
