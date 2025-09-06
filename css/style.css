@@ -269,3 +269,12 @@ nav ul li a:focus {
   text-align: center;
   background-color: #98fb98;
 }
+
+@font-face {
+  font-family: 'Nasakh';
+  src: url(https://raw.githubusercontent.com/mustafa0x/qpc-fonts/f93bf5f3/various-woff2/UthmanTN1%20Ver10.woff2);
+}
+
+.nasakh{
+  font-family: "Nasakh";
+}
