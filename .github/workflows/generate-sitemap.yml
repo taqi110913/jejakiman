@@ -1,0 +1,49 @@
+name: Generate sitemap
+
+on:
+  push:
+    branches-ignore: ["update-sitemap"]   # avoid infinite loops
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  generate-and-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Generate sitemap.xml
+        env:
+          BASE_URL: "https://jejakimanpages.dev"
+          SITE_DIR: "."
+          OUTPUT_FILE: "sitemap.xml"
+        run: |
+          python generate_sitemap.py
+
+      - name: Create or update PR with sitemap
+        id: create_pr
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore: update sitemap.xml"
+          branch: update-sitemap
+          title: "Update sitemap.xml"
+          body: "This PR updates the automatically generated sitemap.xml."
+          labels: automation
+
+      - name: Enable auto-merge for the PR
+        if: steps.create_pr.outputs.pull-request-number != ''
+        uses: peter-evans/enable-pull-request-automerge@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          pull-request-number: ${{ steps.create_pr.outputs.pull-request-number }}
+          merge-method: squash
