@@ -39,7 +39,7 @@ entries = []
 for root, dirs, files in os.walk(SITE_DIR):
     # skip .git folders or node_modules if present in the walk
     rel_parts = os.path.relpath(root, SITE_DIR).split(os.sep)
-    if ".git" in rel_parts or "node_modules" in rel_parts:
+    if ".git" in rel_parts or "node_modules" in rel_parts or "eng" in rel_parts:
         continue
 
     for fname in files:
