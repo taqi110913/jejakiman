@@ -1,0 +1,49 @@
+name: Generate sitemap for /eng (Islam Quest)
+
+on:
+  push:
+    branches-ignore: ["update-sitemap-eng"]   # avoid infinite loops
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  generate-and-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Generate sitemap.xml for /eng
+        env:
+          BASE_URL: "https://islamquest.pages.dev"
+          SITE_DIR: "eng"
+          OUTPUT_FILE: "eng/sitemap.xml"
+        run: |
+          python generate_sitemap.py
+
+      - name: Create or update PR with sitemap (eng)
+        id: create_pr
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.ACTIONS_PAT }}
+          commit-message: "chore: update sitemap.xml for /eng"
+          branch: update-sitemap-eng
+          title: "Update sitemap.xml (eng)"
+          body: "This PR updates the automatically generated sitemap.xml for the English version (Islam Quest)."
+          labels: automation
+
+      - name: Enable auto-merge for the PR
+        if: steps.create_pr.outputs.pull-request-number != ''
+        uses: peter-evans/enable-pull-request-automerge@v3
+        with:
+          token: ${{ secrets.ACTIONS_PAT }}
+          pull-request-number: ${{ steps.create_pr.outputs.pull-request-number }}
+          merge-method: squash
