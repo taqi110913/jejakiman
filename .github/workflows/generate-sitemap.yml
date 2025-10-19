@@ -23,7 +23,7 @@ jobs:
 
       - name: Generate sitemap.xml
         env:
-          BASE_URL: "https://jejakimanpages.dev"
+          BASE_URL: "https://jejakiman.pages.dev"
           SITE_DIR: "."
           OUTPUT_FILE: "sitemap.xml"
         run: |
