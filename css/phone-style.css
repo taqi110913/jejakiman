@@ -1,0 +1,43 @@
+@media (max-width: 768px) {
+  .nav-center .site-title,
+  .nav-center .subtitle {
+    display: none;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid #eaeaea;
+    padding: 20px 0;
+  }
+
+  .nav-links a {
+    padding: 10px 20px;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .close-btn {
+    display: none;
+  }
+
+  .menu-open .menu-btn {
+    display: none;
+  }
+
+  .menu-open .close-btn {
+    display: block;
+  }
+}
