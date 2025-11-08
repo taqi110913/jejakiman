@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html lang="ms">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kongsikan pandangan, perkongsian, doa, atau perkara yang anda syukuri di Puang Perkongsian Jejak Iman!">
+    <meta content="Ruang Perkongsian Jejak Iman" property="og:title">
+    <meta property="og:type" content="website">
+    <meta content="https://jejakiman.pages.dev/images/logo.png" property="og:image">
+    <meta property="og:url" content="https://jejakiman.pages.dev/komuniti">
+    <title>Ruang Perkongsian Jejak Iman</title>
+    <link href="/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/phone-style.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="/images/logo.png" type="image/png">
+    <link rel="preload" fetchpriority="high" as="image" href="/images/hero_image.svg" type="image/svg">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/javascript/scripts.js"></script>
+    <script src="/javascript/include.js"></script>
+  <style>
+    .container {
+      max-width: 900px;
+      margin: 32px auto;
+      padding: 20px;
+    }
+
+    .community-card {
+      background: #faf9f6;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      padding: 28px;
+    }
+
+    .community-header {
+      text-align: center;
+      margin-bottom: 18px;
+    }
+
+    .community-header h1 {
+      margin: 0 0 6px 0;
+      color: #5b4636;
+      font-weight: 600;
+      font-size: 24px;
+    }
+
+    .community-header p {
+      margin: 0;
+      color: #7a6a58;
+      font-size: 14px;
+    }
+
+    /* Cusdis wrapper style and iframe blending */
+    #cusdis_thread {
+      margin-top: 18px;
+      border-radius: 12px;
+      overflow: hidden; /* round the iframe corners */
+      background: #fff;
+      border: 1px solid rgba(90,80,70,0.04);
+    }
+
+    /* Ensure iframe takes full width */
+    #cusdis_thread iframe {
+      width: 100%;
+      border: none;
+      min-height: 420px; /* fallback height */
+      display: block;
+    }
+
+    /* Small responsive tweak */
+    @media (max-width: 640px) {
+      .container { padding: 12px; }
+      .community-card { padding: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <div include-html="/structure/navbar.html"></div>
+  <main class="container">
+    <section class="community-card" id="jejakiman-community">
+      <header class="community-header" role="banner" aria-label="Jejak Iman community header">
+        <h1>Jejak Iman: Kongsi Refleksi</h1>
+        <p>Selamat datang ke Ruang Perkongsian Jejak Iman! Kongsikan pandangan, perkongsian, doa, atau perkara yang anda syukuri.</p>
+      </header>
+      <div id="cusdis_thread"
+           data-host="https://cusdis.com"
+           data-app-id="0ad36e55-ee24-453a-859b-1a7797b79d88"
+           data-page-id="komuniti-november-2025"
+           data-page-url="https://jejakiman.pages.dev/komuniti"
+           data-page-title="Jejak Iman Community">
+      </div>
+
+      <!-- Optional small footer text -->
+      <p style="text-align:center; color:#9b8f82; margin-top:14px; font-size:13px;">
+        Sila hormati peraturan: berkongsi dengan beradab dan fokus pada refleksi.
+      </p>
+    </section>
+  </main>
+  <script>
+  window.CUSDIS_LOCALE = {
+    powered_by: 'Terima kasih kepada Cusdis untuk sistem refleksi ini! 🌱',
+    post_comment: 'Kongsi Perkongsian Anda 🌸',
+    loading: 'Sedang menyediakan ruang bicara...',
+    email: 'E-mel (InsyaAllah, maklumat anda akan dijaga dengan penuh amanah)',
+    nickname: 'Nama Anda',
+    reply: 'Tambah Pandangan',
+    cancel_reply: 'Batalkan',
+    reply_placeholder: 'Ingat, kongsikan pandangan anda dengan adab dan hikmah!',
+    submitting: 'Sedang menghantar perkongsian...',
+    sending: 'Hampir selesai...',
+    submit: 'Siap! Boleh hantar!',
+    comment_has_been_sent: 'JazakAllah Khair atas perkongsian yang bermanfaat! 🌟',
+    like: 'Bagus!',
+    delete: 'Padam',
+    report: 'Laporkan',
+    load_more: 'Muatkan lagi',
+    no_comment: 'Belum ada perkongsian. Mulakan dengan bismillah!',
+    placeholder: 'Kongsikan pengalaman dan pandangan anda di sini. Ingat, adab sebelum ilmu!',
+    powered_by_cusdis: "",
+    reply_btn: 'Tambah Pandangan',
+  };
+
+  window.addEventListener('load', () => {
+    if (window.renderCusdis) window.renderCusdis();
+  });
+</script>
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+  <script>
+    window.addEventListener('load', () => {
+      const el = document.getElementById('cusdis_thread');
+      if (!el) return;
+      setTimeout(() => {
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 900);
+    });
+  </script>
+  <div include-html="/structure/footer.html"></div>
+</body>
+</html>
