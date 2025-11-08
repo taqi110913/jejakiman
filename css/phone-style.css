@@ -40,4 +40,18 @@
   .menu-open .close-btn {
     display: block;
   }
+
+  .hero-image {
+    height: 60vh;
+  }
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  .hero-text p {
+    font-size: 1rem;
+  }
+  .hero-text button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
 }
