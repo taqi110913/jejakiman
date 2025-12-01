@@ -339,3 +339,6 @@ body.dark-mode .close-btn,
 body.dark-mode .dark-mode-toggle {
   color: #f5f5f5;
 }
+.formkit-sticky-bar{
+  z-index: 1001;
+}
